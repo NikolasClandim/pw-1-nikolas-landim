@@ -1,36 +1,51 @@
-*{
-    margin: 3px;
-    padding: 0;
-    font-size: 2rem;
-    }
-
 body{
     background-color: antiquewhite;
-    }
+    color: rgb(8, 1, 1);
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 16px;
+}
+
+a{
+        color: black;
+}
 
 .totoro{
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border: 5px solid rgb(2, 2, 2);  
-    }
+}
+
+header img{
+    width: 150 px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+footer img{
+    width: 150 px;
+    height: 150px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+nav a:hover{
+    color: blue;
+}
 
 .center{
     text-align: center;
-    }
+}
 
-.nikolas_c_landim{
-        
-    width:100%;
-    margin:auto; 
-    overflow:auto;    
-    }
-
-.descrição{
-    text-align: center;
-            
-    }
-
-hr{
-    color: rgb(235, 224, 167);
+.margen{
+    padding: 0px 50px;
 }
