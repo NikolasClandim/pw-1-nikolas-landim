@@ -1,36 +1,179 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
 }
 
-body{
+body {
     background-color: #000000;
     color: #ffffff;
     font-size: 16px;
+    overflow: hidden;
 }
 
-header{
-    position:fixed;
-    width: 80vw;
+header {
+    position: fixed;
+    width: 50vw;
     left: 50%;
-    transform: translatex(-50%);
+    transform: translateX(-50%);
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 600px;
     gap: 10%;
+    z-index: 2;
+}
 
-    & img {
-        d
-    }
+header img {
+    width: 150px;
+}
 
-    & nav{
-        & ul{
-            display: grid;
-            grid-template-columns:repeat(3,200px)
+header nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
 
-        }
 
-    }
+
+section {
+    background-image: radial-gradient(rgb(255, 255, 255),rgb(0, 0, 0));
+    height: 782px;
+    position: relative;
+}
+
+section .list::before {
+    width: 20vw;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: 50%;
+    border-top:1px solid #fff ;
+}
+section .item {
+    position: absolute;
+    inset: 0;
+}
+
+section .content {
+    position: absolute;
+    right: 100px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    gap: 20px;
+}
+
+section .content .car-information {
+    font-weight: bold;
+}
+
+section .content h2 {
+    font-size: 8em;
+    line-height: 1em;
+}
+
+section .content .description {
+    color: #c7c4c4;
+    font-size: 12px;
+    text-align: right;
+    max-width: 400px;
+}
+
+section .content .information{
+    border-radius: 30px;
+    height: 35px;
+    width: 120px;
+    text-transform: uppercase;
+    border: 2px solid #1d6d48;
+    background-color: aqua;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+section .car-img {
+    position: absolute;
+    top: 50%;
+    transform: rotateY(-50%);
+    width: 70%;
+}
+
+section .car-img img {
+    width: 100%;
+    transform: rotate(-25deg);
+}
+
+section .arrows{
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-25px);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+section .arrows button:hover{
+    background-color: aqua;
+}
+
+section .arrows button img {
+    width: 30px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+section .arrows button:nth-child(1){
+    transform: scale(-1);
+}
+
+section .arrows button{
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+section .indicators {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: rotateX(-50%);
+    height: 200px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 15px;
+}
+
+section .indicators .number {
+    font-size:5em ;
+}
+
+section .indicators ul {
+    display: flex;
+    gap: 10px;
+}
+
+section .indicators ul li {
+    width: 50px;
+    height: 5px;
+    background-color:aqua ;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+section .indicators ul .active {
+    background-color: #fff;
 }
